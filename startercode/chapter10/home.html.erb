@@ -1,0 +1,15 @@
+<p>Find me in
+   app/views/static_pages/home.html.erb</p>
+<h3>Links passing action name as a hash<h3>
+<%= link_to "Info", {:action => "info"} %> |
+<%= link_to "GuestBook", {:action => "guestbook"} %>
+<hr>
+<h3>Links passing a relative URL as a string<h3>
+<%= link_to "Info", "info" %> |
+<%= link_to "GuestBook", "guestbook" %>
+<hr>
+<h3>Link passing an absolute URL as string<h3>
+<%= link_to "/training/etc",
+    "http://trainingetc.com" %>
+<%= link_to "/training/etc",
+    "http://trainingetc.com", :class => "links" %>

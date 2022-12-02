@@ -1,0 +1,27 @@
+<h2>Log In</h2>
+<%= form_for :user do |f| %>
+<%= f.error_messages  %>
+<fieldset><legend>Enter Your Details</legend>
+<table border="1">
+  <tr class="form_row">
+    <td><%= f.label :loginname, "Screen Name" %></td>
+        <td><%= f.text_field :loginname,
+          :size => User::NAME_SIZE,
+          :maxlength => User::NAME_MAX_LENGTH %></td>
+  </tr>	
+  <tr class="form_row">
+    <td><%= f.label :password %></td>
+    <td><%= f.password_field :password,
+            :size => User::PWD_SIZE,
+            :maxlength=>User::PWD_MAX_LENGTH %></td>
+  </tr>
+  <tr  class="form_row">
+    <td colspan="2" align="center">
+      <%= f.submit "Login!" %></td>
+  </tr>
+</table>
+</fieldset>
+<% end %>
+<h3>Not a Member?
+<%= link_to "Register Now", :action => "register" %>
+</h3>

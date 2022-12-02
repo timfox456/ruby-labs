@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Form Data</title>
+    <style>
+      body{ text-align:center; }
+      #exp{ width:95% }
+      table{ width:50%; margin:auto;
+             border-style:solid;
+             text-align:center;}
+    </style>
+  </head>
+  <body>
+  <form action="/evaluator/compute">
+    <table>
+      <caption>Expression Evaluator Form</caption>
+      <tr>
+        <td>
+          <input type="text" name="expr" id="exp" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+           <input type="submit" value="Evaluate" />
+        </td>
+      </tr>
+    </table>
+  </form>
+  </body>
+</html>

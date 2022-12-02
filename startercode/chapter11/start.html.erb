@@ -1,0 +1,25 @@
+<style>
+  body{ text-align:center; }
+  #exp, textarea{ width:95% }
+</style>
+<h3>Another Expression Evaluator</h3>
+<%= form_tag "result", :method=> "get" %>
+  <%= text_field_tag "expr", "Enter Data Here",
+      :id => "exp" %>
+  <hr />
+  <%= text_area_tag "txt", "Some default text",
+      :rows=> 4 %>
+  <hr />
+  <%= check_box_tag "italics", nil %>Italics
+  <hr />
+  <%= radio_button_tag "base", 10, true %>Decimal
+  <%= radio_button_tag "base", 16, false %>Hex
+  <%= radio_button_tag "base", 8, false %>Octal
+  <hr />
+  Choose a Color:
+  <%= select_tag "color",
+      options_for_select(["red","green","blue"]) %>
+  <hr />
+  <%= submit_tag "Evaluate" %>
+  <%= button_tag "Clear", :type => "reset" %>
+</form>

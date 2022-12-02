@@ -1,0 +1,22 @@
+<style>* { text-align:center; margin: auto}</style>
+<table border=1>
+  <caption>Books</caption>
+  <tr>
+    <th>ID:</th><th>Title:</th><th>Author:</th>
+    <th>Pages:</th><th>Price:</th>
+  </tr>
+  <% for book in @books %>
+    <tr>
+      <td><%= book.id %></td>
+      <td><%= book.title %></td>
+      <td><%= book.author %></td>
+      <td><%= book.pages %></td>
+      <td><%= book.price %></td>
+    </tr>
+  <% end %>
+</table>
+<br />
+<%= link_to "Index", :action => "index" %> |
+<%= link_to "List Books", :action => "list" %> |
+<%= link_to 'Highest Costing Book',:action=>'compute' %> |
+<%= link_to "Add Books", :action => "add" %>

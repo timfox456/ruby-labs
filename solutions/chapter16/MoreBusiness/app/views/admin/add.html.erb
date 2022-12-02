@@ -1,0 +1,11 @@
+<h1>Add An Employee</h1>
+<fieldset><legend>Enter Details</legend>
+  <%= form_for :employee do |f| %>
+  <%= f.error_messages %>
+  Name
+  <div class="row"><%= f.text_field :name %></div>
+  TITLE
+  <div class="row"><%= f.text_field :title %></div>
+  <br><%= f.submit "Save These" %>
+  <% end %>
+</fieldset>

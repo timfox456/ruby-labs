@@ -1,0 +1,31 @@
+<h2>Register</h2>
+<%= form_for :user,
+     :url => { :action => "register" } do |f| %>
+<%= f.error_messages %>
+<fieldset><legend>Enter Your Details</legend>
+<table border="1">
+  <tr>
+    <td><%= f.label :loginname, "Screen Name" %></td>
+    <td><%= f.text_field :loginname,
+          :size => User::NAME_SIZE,
+          :maxlength => User::NAME_MAX_LENGTH %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :email %></td>
+    <td><%= f.text_field :email,
+          :size => User::EMAIL_SIZE,
+          :maxlength=>User::EMAIL_MAX_LENGTH  %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :password %></td>
+    <td><%= f.password_field :password,
+            :size => User::PWD_SIZE,
+            :maxlength=>User::PWD_MAX_LENGTH %></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <%= f.submit "Register!" %></td>
+  </tr>
+</table>
+</fieldset>
+<% end %>

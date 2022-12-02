@@ -1,0 +1,17 @@
+<h1>
+  Projects List For <%= @emp.name %>: <%= @emp.title %>
+  <br />
+  # of projects: <%= @emp.projects.size %>
+</h1>
+<table>
+  <tr><th>Name</th>
+  <tr>
+  <% i = 1 %>
+  <% for item in @emp.projects %>
+    <tr>
+      <td><%= i %></td>
+      <td><%= item.project %></td>
+    </tr>
+    <% i = i + 1 %>
+  <% end %>
+</table>

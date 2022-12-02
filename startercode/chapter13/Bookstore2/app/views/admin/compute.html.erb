@@ -1,0 +1,15 @@
+<style>* { text-align:center; margin: auto}</style>
+
+<h3>Highest Costing Book(s)</h3>
+<hr />
+The books costing the most are:
+<% for book in @highest_books %>
+<div>
+<%= book.title %>: $<%= book.price %>
+</div>
+<% end %>
+<br />
+<%= link_to "Index", :action => "index" %> |
+<%= link_to "List Books", :action => "list" %> |
+<%= link_to 'Highest Costing Book',:action=>'compute' %> |
+<%= link_to "Add Books", :action => "add" %>

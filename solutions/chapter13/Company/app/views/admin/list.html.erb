@@ -1,0 +1,19 @@
+<style>* { text-align:center; margin: auto}</style>
+<table border=1>
+  <caption>Employees</caption>
+  <tr>
+    <th>ID:</th><th>Last Name:</th>
+    <th>SSN:</th><th>Telephone:</th>
+  </tr>
+  <% for employee in @employees %>
+    <tr>
+      <td><%= employee.id %></td>
+      <td><%= employee.lastname %></td>
+      <td><%= employee.ssn %></td>
+      <td><%= employee.telephone %></td>
+    </tr>
+  <% end %>
+</table>
+<br />
+<%= link_to "List Employees", :action => "list" %> |
+<%= link_to "Add Employees", :action => "add" %>

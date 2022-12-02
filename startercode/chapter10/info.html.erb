@@ -1,0 +1,18 @@
+<h1>StaticPages#info</h1>
+Find me in: 
+<code>app/views/static_pages/info.html.erb</code>
+<% x = 10
+   y = 20
+  z = x + y
+  lucky_number = rand(100)
+%>
+<div>x = <%= x %></div>
+<div>y = <%= y %></div>
+<div>x + y = <%= z %></div>
+<hr />
+<div>Your lucky number is:
+     <%= lucky_number %></div>
+<hr />
+Today is: <%=Time.now.to_s %><br />
+Today is: <%=Time.now %><br />
+

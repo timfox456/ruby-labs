@@ -1,0 +1,10 @@
+<h1><%= pluralize(@items.size, "Employee") %></h1>
+<table>
+  <tr><th>Name</th><th>Title</th></tr>
+  <% for emp in @items %>
+  <tr>
+    <td><%= emp.name %></td>
+    <td><%= emp.title %></td>
+  </tr>
+  <% end %>
+</table>

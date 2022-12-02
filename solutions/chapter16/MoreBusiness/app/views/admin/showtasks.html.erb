@@ -1,0 +1,22 @@
+<h1>
+  Task List For <%= @emp.name %>: <%= @emp.title %>
+  <br />
+  # of tasks: <%= @emp.tasks.size %>
+</h1>
+<table>
+  <tr><th>Number</th><th>Task</th>
+      <th>Budget</th>
+  <tr>
+  <% i = 1 %>
+  <% for item in @emp.tasks %>
+    <tr>
+      <td><%= i %></td>
+      <td><%= item.thetask %></td>
+      <td><%= item.budget %></td>
+      <td><%= link_to 'Delete',
+                :action => "deletetask",
+                :id => item.id %></td>
+    </tr>
+    <% i = i + 1 %>
+  <% end %>
+</table>

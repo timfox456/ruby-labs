@@ -1,0 +1,22 @@
+<h2>Employees and Tasks</h2>
+<% for emp in @items %>
+  <table>
+      <tr>
+        <th id="titles">TASK #</th>
+        <th  id="titles">
+          <%= emp.name %>: (<%= emp.title %>)
+        </th>
+        <th id="titles">BUDGET</th>
+      </tr>
+  <% ct = 1 %>
+  <% for task in emp.tasks %>
+      <tr>
+        <td id="tasks"><%= ct %></td>
+        <td id="tasks"><%= task.thetask %></td>
+        <td id="tasks"><%= task.budget %></td>
+      </tr>
+      <% ct = ct + 1 %>
+  <% end %>
+  </table>
+<hr>
+<% end %>

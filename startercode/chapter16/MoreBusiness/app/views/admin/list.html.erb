@@ -1,0 +1,25 @@
+<% ct = 1 %>
+<h1><%= pluralize(@items.size, "Employee") %></h1>
+<table>
+  <tr>
+    <th>#</th><th>Name</th><th>Title</th><th>Add</th>
+    <th>Show</th><th>Edit</th>
+  </tr>
+  <% for emp in @items %>
+  <tr>
+    <td><%= ct %></td>
+    <td><%= emp.name %></td>
+    <td><%= emp.title %></td>
+    <td><%= link_to "Add Task",
+              :action => "addtask",
+              :id => emp.id %></td>
+    <td><%= link_to "Show Tasks",
+              :action => "showtasks",
+              :id => emp.id %></td>
+    <td><%= link_to "Edit",
+              :action => "edit",
+              :id => emp.id %></td>
+  </tr>
+  <% ct+= 1 %>
+  <% end %>
+</table>

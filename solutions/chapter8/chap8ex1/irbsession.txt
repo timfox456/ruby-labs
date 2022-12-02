@@ -1,0 +1,26 @@
+$ irb
+1.9.3p392 :001 > $: << "."  #append current dir to path
+ => ["/home/student/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/site_ruby/1.9.1", "/home/student/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/site_ruby/1.9.1/i686-linux", "/home/student/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/site_ruby", "/home/student/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/vendor_ruby/1.9.1", "/home/student/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/vendor_ruby/1.9.1/i686-linux", "/home/student/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/vendor_ruby", "/home/student/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1", "/home/student/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/i686-linux", "."] 
+1.9.3p392 :002 > require "chap8ex1"
+Am requiring this file
+ => true 
+1.9.3p392 :003 > require "chap8ex1"
+ => false 
+1.9.3p392 :004 > obj = X.new
+ => #<X:0x8524628> 
+1.9.3p392 :006 > obj.help
+help
+ => nil 
+1.9.3p392 :007 > obj.morehelp
+NoMethodError: undefined method `morehelp' for #<X:0x8524628>
+	from (irb):7
+	from /home/student/.rvm/rubies/ruby-1.9.3-p392/bin/irb:16:in `<main>'
+1.9.3p392 :008 > #Uncommenting morehelp and resaving chap8ex1.rb here before next command
+1.9.3p392 :012 > load "chap8ex1.rb"
+Am requiring this file
+ => true 
+1.9.3p392 :016 > obj.morehelp
+more help
+ => nil 
+1.9.3p392 :017 > exit
+

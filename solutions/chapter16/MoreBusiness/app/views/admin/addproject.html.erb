@@ -1,0 +1,11 @@
+<% id = params[:id] %>
+<h1>Adding a Project for 
+<%= Employee.find_by_id(id).name %></h1>
+<fieldset><legend>Enter Details</legend>
+  <%= form_for :project do |f| %>
+  <%= hidden_field_tag "id", id %>
+  Name
+  <div class="row"><%= f.text_field :name %></div>
+  <br><%= f.submit "Add Project"%></div>
+  <% end %>	
+</fieldset>

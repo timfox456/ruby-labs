@@ -1,0 +1,10 @@
+<h3>Please enter your information</h3>
+<%= form_tag "result", :method=> "get" %>
+  First Name: <%= text_field_tag "first"%><br />
+  Last Name: <%= text_field_tag "last" %><br />
+  <%= radio_button_tag "gender", "Male", true %>Male
+  <%= radio_button_tag "dender", "Female", false %>Female
+  <hr />
+  <%= submit_tag "Submit" %>
+  <%= button_tag "Clear", :type => "reset" %>
+</form>

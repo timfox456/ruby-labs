@@ -1,0 +1,26 @@
+<%
+style = "text-align:center;"
+style += "color:" + @color + ";"
+if @italics
+  style += "font-style:italic;"
+end
+
+x = eval(@expression)
+
+if @base == "10"
+  fmt = "%d"
+elsif @base == "8"
+  fmt = "%o"
+else
+  fmt = "%x"
+end
+%>
+<div style="<%= style %>">
+The Following Expression:<br />
+<%= @expression %><br />
+In base: <%= @base %><br />
+Evaluates to:<br />
+<%= sprintf fmt, x %>
+<hr>
+<%= @txt %>
+<div>

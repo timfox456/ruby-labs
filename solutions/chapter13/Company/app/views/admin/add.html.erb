@@ -1,0 +1,22 @@
+<h3>Fill in the form to add an Employee</h3>
+<%= form_for :employee,
+    :url => {:action => "addme"} do |f| %>
+
+  <%= f.error_messages %><hr />
+  <div>
+    <%= f.label :lastname, "Last Name" %><br />
+    <%= f.text_field :lastname %>
+  </div>
+  <div>
+    <%= f.label :ssn %><br />
+    <%= f.text_field :ssn %>
+  </div>
+  <div>
+    <%= f.label :telephone %><br />
+    <%= f.text_field :telephone %>
+  </div>
+  <div><%= f.submit %></div>
+<% end %>
+<br />
+<%= link_to "List Employees", :action => "list" %> |
+<%= link_to "Add Employees", :action => "add" %>

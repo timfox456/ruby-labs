@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Form Data</title>
+    <style>
+      body{ text-align:center; }
+      #exp, textarea{ width:95% }
+    </style>
+  </head>
+  <body>
+  <h3>Another Expression Evaluator</h3>
+  <form action="/evaluator/compute_again">
+    <input type="text" name="expr" id="exp" />
+    <hr />
+    <textarea name="txt"
+             rows="4">Some default text</textarea>
+    <hr />
+    <input type="checkbox"
+             name="italics"/>Italics
+    <hr />
+    <input type="radio" name="base" value="10"
+           checked="checked" />Decimal
+    <input type="radio"
+           name="base" value="16" />Hex
+    <input type="radio"
+           name="base" value="8" />Octal
+    <hr />
+    Choose a Color:
+    <select name="color">
+      <option>red</option>
+      <option>green</option>
+      <option>blue</option>
+    </select>
+    <hr />
+    <input type="submit" value="Evaluate" />
+    <input type="reset" value="Clear" />
+  </form>
+  </body>
+</html>
